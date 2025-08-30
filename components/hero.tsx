@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Instagram, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Instagram, ArrowDown, FileText, Folder, FolderKanban, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
@@ -18,7 +18,7 @@ export function Hero() {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
+    <section id="home" className="min-h-screen flex items-center justify-center relative mt-10 sm:mt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
@@ -34,10 +34,22 @@ export function Hero() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button
+              variant="outline"
+              size="lg"
+              onClick={() => scrollToSection('resume')}
+              className="px-8 py-3 text-lg font-medium"
+            >
+              <a href="https://drive.google.com/file/d/10UeiZ51Xc1NW_kE6gUC6RRVOdvCRYhVv/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <FileText className="inline-block mr-2 h-5 w-5" />
+                View Resume
+              </a>
+            </Button>
+            <Button
               size="lg"
               onClick={() => scrollToSection('projects')}
               className="px-8 py-3 text-lg font-medium"
             >
+              <FolderKanban className="inline-block mr-2 h-5 w-5" />
               View Projects
             </Button>
             <Button
@@ -46,7 +58,9 @@ export function Hero() {
               onClick={() => scrollToSection('contact')}
               className="px-8 py-3 text-lg font-medium"
             >
+              <Mail className="inline-block mr-2 h-5 w-5" />
               Contact Me
+        
             </Button>
           </div>
 

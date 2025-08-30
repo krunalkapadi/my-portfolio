@@ -63,7 +63,9 @@ export function Contact() {
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <Mail className='inline-block mr-2 h-9 w-9 font-bold' />
+            Let's Work Together</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to bring your ideas to life? I'm always excited to discuss new
             projects and opportunities. Let's create something amazing together.
@@ -103,6 +105,7 @@ export function Contact() {
 
           {/* Contact Form */}
           <div className="animate-fade-in-right">
+            <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">

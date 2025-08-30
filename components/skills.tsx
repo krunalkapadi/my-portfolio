@@ -10,7 +10,8 @@ import {
   Palette,
   Zap,
   Code,
-  Code2Icon
+  Code2Icon,
+  Wrench
 } from 'lucide-react';
 
 export function Skills() {
@@ -52,7 +53,9 @@ export function Skills() {
     <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Skills & Technologies</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <Wrench className='inline-block mr-2 h-9 w-9 font-bold' />
+            Skills & Technologies</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A comprehensive toolkit of modern technologies and frameworks I use to build
             exceptional digital experiences.

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X ,Home, User, Wrench, FolderKanban , Mail, Layout } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import { Button } from '@/components/ui/button';
 
@@ -26,11 +26,11 @@ export function Navbar() {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Home', icon: Home },
+    { id: 'about', label: 'About', icon: User },
+    { id: 'skills', label: 'Skills', icon: Wrench },
+    { id: 'projects', label: 'Projects', icon: FolderKanban },
+    { id: 'contact', label: 'Contact' , icon: Mail },
   ];
 
   return (
@@ -48,6 +48,7 @@ export function Navbar() {
               onClick={() => scrollToSection('home')}
               className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
             >
+              <Layout className="md:h-7 md:w-8 h-5 w-5 inline-block mr-1" />
               Portfolio
             </button>
           </div>
@@ -61,6 +62,7 @@ export function Navbar() {
                   onClick={() => scrollToSection(item.id)}
                   className="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
                 >
+                  <item.icon className="inline-block h-5 w-5 mr-1" />
                   {item.label}
                 </button>
               ))}
@@ -74,7 +76,7 @@ export function Navbar() {
             <div className="md:hidden">
               <Button
                 variant="ghost"
-                size="sm"
+                size="icon"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="w-9 h-9"
               >
@@ -99,6 +101,7 @@ export function Navbar() {
                 onClick={() => scrollToSection(item.id)}
                 className="text-muted-foreground hover:text-primary block px-3 py-2 text-base font-medium w-full text-left transition-colors"
               >
+                <item.icon className="inline-block h-5 w-5 mr-1" />
                 {item.label}
               </button>
             ))}

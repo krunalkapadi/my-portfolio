@@ -1,5 +1,6 @@
 'use client';
 
+import { User } from 'lucide-react';
 import Image from 'next/image';
 
 export function About() {
@@ -20,10 +21,12 @@ export function About() {
           </div>
           
           <div className="animate-fade-in-right">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              <User className='inline-block mr-2 h-9 w-9 font-bold' />
+              About Me</h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-              🎓 I have recently completed my Bachelor's degree in computer engineering from Silvr Oak University Ahmedabad.
+              🎓 I have recently completed my Bachelor's degree in computer engineering from Silver Oak University at Ahmedabad.
               </p>
               <p>
               💼 I have 1 months of remote internship experience as a Web Developer Intern, where I worked with modern technologies like JavaScript, HTML, CSS, React, Next JS, Express JS, and gained practical knowledge of building scalable web applications.
