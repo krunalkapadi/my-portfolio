@@ -5,14 +5,23 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 export function Projects() {
-  const projects = [
+  type Project = {
+    title: string;
+    description: string;
+    image: string;
+    technologies: string[];
+    githubUrl: string;
+    //liveUrl?: string;
+  };
+
+  const projects: Project[] = [
     {
       title: 'EatNearBy',
       description: 'Eat Nearby is a platform that helps users discover restaurants and hotels around their location, allowing them to explore options based on ratings, pricing, and proximity. It makes finding the right place to eat simple, quick, and convenient.',
       image: '/images/EatNearBy.jpeg',
-      technologies: ['Next.js', 'TypeScript', 'Stripe', 'MongoDB'],
+      technologies: ['React JS', 'Express JS', 'Tailwind CSS', 'MongoDB'],
       githubUrl: 'https://github.com/krunalkapadi/EatNearBy-Project.git',
-      liveUrl: 'https://example.com',
+      // liveUrl: '', // Add a liveUrl if available
     },
   /*  {
       title: 'Task Management App',
@@ -26,9 +35,9 @@ export function Projects() {
       title: 'Sorting Visualizer',
       description: 'Sorting Visualizer is an interactive tool that visually demonstrates how different sorting algorithms work. It helps users understand the step-by-step process of sorting by providing real-time animations and comparisons.',
       image: '/images/sorting.png',
-      technologies: ['Vue.js', 'Express', 'Weather API', 'Chart.js'],
+      technologies: ['React JS', 'CSS'],
       githubUrl: 'https://github.com/krunalkapadi/SortingVisualizer.git',
-      liveUrl: 'https://example.com',
+      
     },
    /* {
       title: 'Social Media Dashboard',
@@ -39,12 +48,12 @@ export function Projects() {
       liveUrl: 'https://example.com',
     },*/
     {
-      title: 'Learning Management System',
-      description: 'Educational platform with course creation, progress tracking, and interactive learning modules.',
+      title: 'Employee Leave Management System',
+      description: 'A web-based Employee Leave Management System that streamlines leave requests, approvals, and tracking for employees and managers. Built with a frontend–backend architecture to ensure smooth workflows and accurate record management',
       image: 'https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg',
-      technologies: ['Next.js', 'Supabase', 'Tailwind', 'Framer Motion'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      technologies: ['Next JS', 'Express JS', 'Tailwind CSS', 'MongoDB'],
+      githubUrl: 'https://github.com/krunalkapadi/employee-leave-mangement.git',
+     
     },
    /* {
       title: 'Real Estate Platform',
@@ -105,19 +114,21 @@ export function Projects() {
                 </div>
                 
                 <div className="flex space-x-3">
-                  <Button variant="outline" size="sm" asChild>
+                  {/* <Button variant="outline" size="sm" asChild>
                     <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      <Github className="h-4 w-4 mr-1" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <a
+                  {project.liveUrl && (
+                    <Button size="sm" asChild>
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-1" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -126,7 +137,7 @@ export function Projects() {
                       <ExternalLink className="h-4 w-4 mr-1" />
                       Live Demo
                     </a>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
