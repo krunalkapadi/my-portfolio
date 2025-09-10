@@ -138,6 +138,17 @@ export function Projects() {
                       Live Demo
                     </a>
                   </Button> */}
+                  <Button variant="outline" size="sm" asChild>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center"
+                    >
+                      <Github className="h-4 w-4 mr-1" />
+                      Code
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
